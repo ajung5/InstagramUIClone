@@ -16,6 +16,10 @@ struct HomeView: View {
             
             Divider()
             
+            PostHeader()
+            
+            PostContent()
+            
             Spacer()
         }
     }
@@ -115,5 +119,53 @@ struct Stories: View {
             .padding(.horizontal, 8)
         }
         .padding(.vertical, 10)
+    }
+}
+
+// MARK: Post
+struct PostHeader: View {
+    var body: some View {
+        HStack {
+            HStack {
+                Image("profile1")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .clipShape(Circle())
+                Text("John Doe")
+                    .font(.caption)
+                    .fontWeight(.bold)
+            }
+            Spacer()
+            
+            Image(systemName: "ellipsis")
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 8)
+    }
+}
+
+// MARK: Post Content
+struct PostContent: View {
+    var body: some View {
+        VStack(spacing: 0.0) {
+            Image("profile1")
+                .resizable()
+                .frame(maxWidth: .infinity)
+                .scaledToFit()
+            
+            HStack {
+                HStack(spacing: 10) {
+                    Image(systemName: "heart")
+                    Image(systemName: "message")
+                    Image(systemName: "paperplane")
+                }
+                
+                Spacer()
+                
+                Image(systemName: "bookmark")
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 9)
+        }
     }
 }
