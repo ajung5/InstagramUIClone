@@ -12,6 +12,9 @@ struct HomeView: View {
         VStack(spacing: 0.0) {
             Header()
             
+            Story()
+            
+            
             Spacer()
         }
     }
@@ -21,6 +24,7 @@ struct HomeView: View {
     HomeView()
 }
 
+// MARK: Header
 struct Header: View {
     var body: some View {
         HStack {
@@ -40,5 +44,43 @@ struct Header: View {
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 3)
+    }
+}
+
+// MARK: Story
+struct Story: View {
+    
+    var image: String = "profile1"
+    var name: String = "John Doe"
+    
+    var body: some View {
+        VStack {
+            VStack {
+                Image(image)
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .clipShape(
+                        Circle()
+                    )
+            }
+            .overlay(
+                Circle()
+                    .stroke(
+                        LinearGradient(colors: [Color.red,
+                                                Color.purple,
+                                                Color.red,
+                                                Color.orange,
+                                                Color.yellow,
+                                                Color.orange],
+                                       startPoint: .topLeading,
+                                       endPoint: .bottomTrailing),
+                        lineWidth: 2.3
+                    )
+                    .frame(width: 68, height: 68)
+            )
+            
+            Text(name)
+                .font(.caption)
+        }
     }
 }
