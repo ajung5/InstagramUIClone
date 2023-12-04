@@ -11,6 +11,7 @@
 		97DF5ADE2B1C95360040A917 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF5ADD2B1C95360040A917 /* ContentView.swift */; };
 		97DF5AE02B1C95390040A917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DF5ADF2B1C95390040A917 /* Assets.xcassets */; };
 		97DF5AE32B1C95390040A917 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DF5AE22B1C95390040A917 /* Preview Assets.xcassets */; };
+		97DF5AEB2B1C9C7D0040A917 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF5AEA2B1C9C7D0040A917 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		97DF5ADD2B1C95360040A917 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		97DF5ADF2B1C95390040A917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DF5AE22B1C95390040A917 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97DF5AEA2B1C9C7D0040A917 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				97DF5ADB2B1C95360040A917 /* InstagramUICloneApp.swift */,
 				97DF5ADD2B1C95360040A917 /* ContentView.swift */,
+				97DF5AE92B1C9C680040A917 /* Views */,
 				97DF5ADF2B1C95390040A917 /* Assets.xcassets */,
 				97DF5AE12B1C95390040A917 /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				97DF5AE22B1C95390040A917 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97DF5AE92B1C9C680040A917 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97DF5AEA2B1C9C7D0040A917 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DF5AEB2B1C9C7D0040A917 /* HomeView.swift in Sources */,
 				97DF5ADE2B1C95360040A917 /* ContentView.swift in Sources */,
 				97DF5ADC2B1C95360040A917 /* InstagramUICloneApp.swift in Sources */,
 			);
