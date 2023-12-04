@@ -21,6 +21,8 @@ struct HomeView: View {
                 
                 Post(image: "cookie", description: "asd")
             }
+            
+            TabBar()
         }
     }
 }
@@ -173,6 +175,7 @@ struct PostContent: View {
     }
 }
 
+// MARK: Post
 struct Post: View {
     
     var image: String = "profile1"
@@ -216,6 +219,28 @@ struct Post: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
+        }
+    }
+}
+
+// MARK: Tab Bar
+struct TabBar: View {
+    var body: some View {
+        VStack(spacing: 0.0) {
+            Divider()
+            
+            HStack (spacing: 55) {
+                Image("home")
+                Image("search")
+                Image("media")
+                Image("cart")
+                Image("profile1")
+                    .resizable()
+                    .frame(width: 21, height: 21)
+                    .clipShape(Circle())
+            }
+            .padding(.horizontal, 25)
+            .padding(.vertical, 10)
         }
     }
 }
