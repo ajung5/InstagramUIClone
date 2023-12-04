@@ -12,15 +12,15 @@ struct HomeView: View {
         VStack(spacing: 0.0) {
             Header()
             
-            Stories()
-            
-            Divider()
-            
-            PostHeader()
-            
-            PostContent()
-            
-            Spacer()
+            ScrollView(.vertical) {
+                Stories()
+                
+                Divider()
+                
+                Post()
+                
+                Post(image: "cookie", description: "asd")
+            }
         }
     }
 }
@@ -146,9 +146,12 @@ struct PostHeader: View {
 
 // MARK: Post Content
 struct PostContent: View {
+    
+    var image: String = "macarons"
+    
     var body: some View {
         VStack(spacing: 0.0) {
-            Image("profile1")
+            Image(image)
                 .resizable()
                 .frame(maxWidth: .infinity)
                 .scaledToFit()
@@ -166,6 +169,53 @@ struct PostContent: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 9)
+        }
+    }
+}
+
+struct Post: View {
+    
+    var image: String = "profile1"
+    var description: String = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur"
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0.0) {
+            PostHeader()
+            PostContent(image: image)
+            
+            Text("Liked by Ajung and 35 others")
+                .font(.footnote)
+                .frame(width: .infinity)
+                .padding(.horizontal, 12)
+            
+            Text(description)
+                .font(.footnote)
+                .frame(width: .infinity)
+                .padding(.horizontal, 12)
+            
+            HStack {
+                HStack(spacing: 7) {
+                    Image(image)
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .clipShape(Circle())
+                    
+                    Text("Add comment...")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Text("😍")
+                    Text("😂")
+                    Image(systemName: "plus.circle")
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
         }
     }
 }
