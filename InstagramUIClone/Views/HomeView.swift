@@ -231,7 +231,7 @@ struct TabBar: View {
             
             HStack (spacing: 55) {
                 Image("home")
-                Image("search")
+                Image("searchIcon")
                 Image("media")
                 Image("cart")
                 Image("profile1")
